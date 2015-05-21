@@ -1,0 +1,268 @@
+  /*---------------------------------------------------------------------
+  -----------  BASIC OPSÆTNING ------------------------------------------
+  ---------------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'flash';
+    src: url(fonts/flashit.ttf);
+}
+
+@font-face {
+    font-family: '8bit';
+    src: url(fonts/prstartk.ttf);
+}
+
+body { background-color: #E0F5FF; }
+
+#title {
+  font-size: 69px;
+  text-align: center;
+  margin-bottom: 0%;
+}
+
+#image {
+  opacity: 0.5%;
+  z-index: 1;
+  height: 70%;
+  width: 70%;
+  position: static;
+  margin-top: 2%;
+  margin-left: 15%;
+  margin-bottom: 6%;
+}
+
+#screen {
+  height: 1722px;
+  background-color: #65a9a7;
+}
+
+#container {
+  opacity: 0;
+  height: 52%;
+  width: 100%;
+  overflow: auto;
+}
+
+  /*---------------------------------------------------------------------
+  ----------- OPSÆTNING AF MAIN_MENU.HTML -------------------------------
+  ---------------------------------------------------------------------*/
+
+#buttons { height: 100%; }
+
+#play-btn {
+  border-radius: 50%;
+  border: 10px solid silver;
+  z-index: 2;
+  text-shadow: -3px -3px #325453, 3px 3px #325453;
+  position: absolute;
+  font-family: '8bit', sans-serif;
+  padding: 0px;
+  width: 64%;
+  height: 41%;
+  top: 1%;
+  margin-left: 13%;
+  color: #fa8585;
+}
+
+#play-btn:active {
+  border: 10px solid silver;
+  -webkit-box-shadow: inset 8px 8px 10px 10px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 8px 8px 10px 10px rgba(0,0,0,0.75);
+  box-shadow: inset 8px 8px 10px 10px rgba(0,0,0,0.75);
+}
+
+#play-btn p {
+  margin-top: 40%;
+  padding-left: 2%;
+  font-size: 50px;
+  text-align: center;
+}
+
+#highscore {
+  background-color: #fcbd85;
+  width: 100%;
+  height: 10%;
+  border: 1px solid #fcbd85;
+  border-radius: 10%;
+  color: #1A237E;
+  margin-bottom: 3px;
+}
+
+#highscore p {
+  font-family: '8bit', sans-serif;
+  font-size: 20px;
+  text-align: left;
+}
+
+#expansions {
+  font-family: '8bit', sans-serif;
+  background-color: #bafb85;
+  font-size: 36px;
+  text-align: left;
+  width: 100%;
+  height: 10%;
+  border: 1px solid #bafb85;
+  border-radius: 10%;
+  color: #1A237E;
+}
+
+#achievements, #settings {
+  font-family: '8bit', sans-serif;
+  text-align: left;
+  width: 100%;
+  height: 10%;
+  border-radius: 10%;
+  color: #1A237E;
+}
+
+#achievements { 
+  background-color: #89f8ea;
+  border: 1px solid #89f8ea;
+}
+
+#trophy, #settingimg {
+  float: left;
+  margin-top: 3%;
+  margin-left: 10%;
+  width: 10%;
+}
+
+#hsimg {
+  float: left;
+  margin-top: 3%;
+  margin-left: 5%;
+  width: 20%;
+}
+
+#plus {
+  float: left;
+  margin-top: 2%;
+  margin-left: 8.5%;
+  width: 12%;
+}
+
+#settings { 
+  background-color: #ef85fc;
+  border: 1px solid #ef85fc;
+  margin-bottom: 1%;
+}
+
+#home:active, #highscore:active, #expansions:active, 
+#settings:active, #achievements:active {
+  text-decoration: none;
+  -webkit-box-shadow: inset 4px 4px 4px 4px #555555;
+  -moz-box-shadow: inset 4px 4px 4px 4px #555555;
+  box-shadow: inset 4px 4px 4px 4px #555555;
+}
+
+#highscore.new, #expansions.new {
+  -webkit-animation-name: pulse;
+  -moz-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/* FOOTER */
+#footer {
+  width: 100%;
+  color: black;
+  height: 20px;
+  font-size: 20px;
+  float: right;
+  text-align: right;
+}
+
+/* KNAP TEKST */
+#highscore p, #expansions p, #achievements p, #settings p { 
+  padding-left: 30%;
+  font-size: 19px;
+}
+
+/* SCROLL BAR */
+::-webkit-scrollbar { display: none; }
+
+#home {
+  width: 200px;
+  margin-left: 43%;
+  height: 130px;
+  width: 130px;
+  margin-top: 1%;
+  font-size: 40px;
+  background-color: transparent;
+  border: 0px solid black;
+  border-radius: 50%;
+}
+
+#homeimg {
+  width: 50%;
+}
+
+  /*---------------------------------------------------------------------
+  ----------- OPSÆTNING AF EXPANSIONS.HTML ------------------------------
+  ---------------------------------------------------------------------*/
+
+#christmas, #legacy {
+  color: #1A237E;
+  height: 45%;
+  width: 100%;
+  background-color: #DDDDDD;
+  border: 5px outset green;
+}
+
+#christmas:active, #legacy:active {
+  text-decoration: none;
+  -webkit-box-shadow: inset 2px 2px 2px #555555;
+  -moz-box-shadow: inset 2px 2px 2px #555555;
+  box-shadow: inset 2px 2px 2px #555555;
+  border: 5px inset green;
+}
+
+#christmas h3, #legacy h3 {
+  text-align: center;
+  font-size: 54px;
+}
+
+#christmas p, #legacy p {
+  padding-left: 5%;
+  font-size: 30px;
+}
+
+  /*---------------------------------------------------------------------
+  ----------- OPSÆTNING AF ACHIEVEMENTS.HTML ----------------------------
+  ---------------------------------------------------------------------*/
+
+#achievs {
+  height: 90%;
+  overflow: auto;
+}
+
+#fiveGames, #tenGames, #twentyGames, #maxScoreOne, #maxScoreFive, #maxScoreTen {
+  width: 96%;
+  height: 20%;
+  background-color: #DDDDDD;
+  border: 5px outset green;
+}
+
+#fiveGames h3, #tenGames h3, #twentyGames h3, #maxScoreOne h3, #maxScoreFive h3 {
+  font-size: 56px;
+  text-align: center;
+  margin: 0px;
+  margin-top: 3%;
+}
+
+#maxScoreTen h3 { 
+  font-size: 48px; 
+  text-align: center;
+  margin: 0px;
+  margin-top: 3%;
+}
+
+#fiveGames p, #tenGames p, #twentyGames p, #maxScoreOne p, #maxScoreFive p, #maxScoreTen p {
+  font-size: 30px;
+  text-align: center;
+}
