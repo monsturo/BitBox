@@ -208,7 +208,7 @@ public class PlayerTwo extends Activity {
 //
 //            @Override
 //            public void onClick(View v) {
-//                Intent webIntent = new Intent(getApplicationContext(), WebApp.class);
+//                Intent webIntent = new Intent(getApplicationContext(), HighScore.class);
 //                startActivity(webIntent);
 //            }
 //        });

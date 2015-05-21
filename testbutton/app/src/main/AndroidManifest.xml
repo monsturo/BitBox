@@ -44,7 +44,7 @@
             android:name=".Device2"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
-        <activity android:name=".WebApp" >
+        <activity android:name=".HighScore" >
         </activity>
 
         <service

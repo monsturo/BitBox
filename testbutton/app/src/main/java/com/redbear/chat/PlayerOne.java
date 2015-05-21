@@ -112,36 +112,41 @@ public class PlayerOne extends Activity {
 
 		setContentView(R.layout.second);
 
-//		tv = (TextView) findViewById(R.id.textView);
-//		tv.setMovementMethod(ScrollingMovementMethod.getInstance());
-//		tv.addTextChangedListener(new TextWatcher() {
-//
-//			@Override
-//			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//			}
-//
-//			@Override
-//			public void onTextChanged(CharSequence s, int start, int before, int count) {
-//				String str = s.toString();
-//				int score = Integer.parseInt(str.substring(start));
-//
-////				if (count > 1){
-////					byte b = 0x64;
-////					BluetoothGattCharacteristic characteristic = map
-////							.get(RBLService.UUID_BLE_SHIELD_TX);
-////					byte[] tx = new byte[1];
-////					tx[0] = b;
-////					characteristic.setValue(tx);
-////					mBluetoothLeService.writeCharacteristic(characteristic);
-////				}
-//			}
-//
-//			@Override
-//			public void afterTextChanged(Editable s) {
-//
-//			}
-//		});
+		tv = (TextView) findViewById(R.id.textView);
+		tv.setMovementMethod(ScrollingMovementMethod.getInstance());
+		tv.addTextChangedListener(new TextWatcher() {
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				String str = s.toString();
+				int score = Integer.parseInt(str.substring(start));
+				/*
+				*
+				* Send score to server
+				*
+				 */
+
+//				if (count > 1){
+//					byte b = 0x64;
+//					BluetoothGattCharacteristic characteristic = map
+//							.get(RBLService.UUID_BLE_SHIELD_TX);
+//					byte[] tx = new byte[1];
+//					tx[0] = b;
+//					characteristic.setValue(tx);
+//					mBluetoothLeService.writeCharacteristic(characteristic);
+//				}
+			}
+
+			@Override
+			public void afterTextChanged(Editable s) {
+
+			}
+		});
 //		et = (EditText) findViewById(R.id.editText);
 		lbtn = (Button) findViewById(R.id.left);
 		rbtn = (Button) findViewById(R.id.right);
@@ -159,22 +164,6 @@ public class PlayerOne extends Activity {
 				tx[0] = b;
 				characteristic.setValue(tx);
 				mBluetoothLeService.writeCharacteristic(characteristic);
-//				BluetoothGattCharacteristic characteristic = map
-//						.get(RBLService.UUID_BLE_SHIELD_TX);
-//
-//				String str = et.getText().toString();
-//				byte b = 0x00;
-//				byte[] tmp = str.getBytes();
-//				byte[] tx = new byte[tmp.length + 1];
-//				tx[0] = b;
-//				for (int i = 1; i < tmp.length + 1; i++) {
-//					tx[i] = tmp[i - 1];
-//				}
-//
-//				characteristic.setValue(tx);
-//				mBluetoothLeService.writeCharacteristic(characteristic);
-//
-//				et.setText("");
 			}
 		});
 
@@ -240,19 +229,6 @@ public class PlayerOne extends Activity {
 			}
 		});
 
-//		Button webTest = (Button)findViewById(R.id.webTest);
-//		webTest.setOnClickListener(new OnClickListener() {
-//
-//			@Override
-//			public void onClick(View v) {
-//				Intent webIntent = new Intent(getApplicationContext(), WebApp.class);
-//				startActivity(webIntent);
-//			}
-//		});
-//
-//		WebView myWebView = (WebView) findViewById(R.id.third);
-//		myWebView.loadDataWithBaseURL("file:///android_res/raw/", null, "raw/index",
-//				"UTF-8", null);
 
 		Intent intent = getIntent();
 
