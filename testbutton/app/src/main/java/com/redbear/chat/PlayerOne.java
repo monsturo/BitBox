@@ -123,23 +123,14 @@ public class PlayerOne extends Activity {
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
-				String str = s.toString();
-				int score = Integer.parseInt(str.substring(start));
+//				String str = s.toString();
+//				int score = Integer.parseInt(str.substring(start));
 				/*
 				*
 				* Send score to server
 				*
 				 */
 
-//				if (count > 1){
-//					byte b = 0x64;
-//					BluetoothGattCharacteristic characteristic = map
-//							.get(RBLService.UUID_BLE_SHIELD_TX);
-//					byte[] tx = new byte[1];
-//					tx[0] = b;
-//					characteristic.setValue(tx);
-//					mBluetoothLeService.writeCharacteristic(characteristic);
-//				}
 			}
 
 			@Override
